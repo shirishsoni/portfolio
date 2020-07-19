@@ -23,7 +23,7 @@
   <nav id="topNav" class="navbar navbar-expand-md navbar-light">
     <div class="container">
       <a class="navbar-brand" href="{% url 'home' %}">
-        <img src="{% static "portfolio/Logo.png" %}" width="30" height="30" class="d-inline-block align-top" alt="Shirish's Logo">
+        <img src="{% static "portfolio/Logo.png" %}" width="40" height="40" class="d-inline-block align-top" alt="Shirish's Logo">
         <span>Shirish Soni</span>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,7 +41,7 @@
             <a class="nav-link" href="https://github.com/shirishsoni" target="_blank">GitHub</a>
           </li>
           <li>
-            <a role="button" href="" class="btn btn-primary">Contact</a>
+            <a role="button" href="{% url 'sendemail:contact' %}" class="btn btn-primary">Contact</a>
           </li>
         </ul>
       </div>

@@ -1,0 +1,29 @@
+<!-- templates/email.html -->
+{% extends "portfolio/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+  <h1>Contact</h1>
+  <br>
+  <form class="" action="" method="post">
+    {% csrf_token %}
+    {% if form.non_field_errors %}<div class="alert alert-danger">
+      {{ form.non_field_errors }}
+    </div>{% endif %}
+    {% load widget_tweaks %}
+    {% for field in form %}
+    <div class="form-group {% if field.errors %}alert alert-danger {% endif %}">
+      {{ field.errors }}
+      {{ field.label_tag }}
+      {% render_field field class='form-control' %}
+      {% if field.help_text %}<snall class="text_muted">
+        {{ field.help_text|safe }}
+        </small>{% endif %}
+    </div>
+    {% endfor %}
+    <button type="submit" class="btn btn-primary" name="">Send</button>
+  </form>
+</div>
+
+{% endblock %}

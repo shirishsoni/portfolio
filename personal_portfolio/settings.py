@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'portfolio',
+    'sendemail.apps.SendemailConfig',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -123,6 +125,14 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # new
+#DEFAULT_FROM_EMAIL = 'dev.apps.testing12@gmail.com'
+EMAIL_HOST = 'smtp.gmail.com' # new
+EMAIL_HOST_USER = 'dev.apps.testing12@gmail.com' # new
+EMAIL_HOST_PASSWORD = 'Develop@123' # new
+EMAIL_PORT = 587 # new
+EMAIL_USE_TLS = True # new
 
 try:
     from .local_settings import *
