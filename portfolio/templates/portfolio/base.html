@@ -21,7 +21,7 @@
 <body>
 
   <nav id="topNav" class="navbar navbar-expand-md navbar-light">
-    <div class="container">
+    <div class="container-fluid">
       <a class="navbar-brand" href="{% url 'home' %}">
         <img src="{% static "portfolio/Logo.png" %}" width="40" height="40" class="d-inline-block align-top" alt="Shirish's Logo">
         <span>Shirish Soni</span>
@@ -47,7 +47,7 @@
       </div>
     </div>
   </nav>
-  <div class="container">
+  <div class="container-fluid">
     {% block content %}{% endblock %}
   </div>
 
