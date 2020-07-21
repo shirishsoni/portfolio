@@ -10,6 +10,40 @@
 {% load static %}
 
 {% block content %}
+<script>
+  function myFunction() {
+    var dots = document.getElementById("dots");
+    var moreText = document.getElementById("more");
+    var btnText = document.getElementById("myBtn");
+
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "Read more";
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "Read less";
+      moreText.style.display = "inline";
+    }
+  }
+</script>
+<script>
+  function myFunction2() {
+    var dots = document.getElementById("dots2");
+    var moreText = document.getElementById("more2");
+    var btnText = document.getElementById("myBtn2");
+
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "Read more";
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "Read less";
+      moreText.style.display = "inline";
+    }
+  }
+</script>
 <!-- Carousal content -->
 <section id='carousel'>
   <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
@@ -24,19 +58,114 @@
     </div>
   </div>
 </section>
-
-<section id="aboutme">
+<!-- About Me -->
+<section id="aboutme" style="background-color:#DCDCDC;">
   <div class="container align">
-    <h1 class="mt-5 center">AboutMe</h1>
-    <hr>
-    <p>Recently graduated from the University of Regina with a Master of Science (Cooperative education) degree in Computer Science. I am a passionate software developer with experience in agile-based software development for business-oriented applications. Currently working in a team for the University of Regina, developing a Full Stack Android application for digitalizing paper-based safety procedures. The application is developed using Kotlin, MySQL database is used as a backend server which is connected to the application by a REST API developed using Python-based Flask to provide database connectivity. I have worked on various machine learning projects wherein data science concepts and algorithms were implemented. Developed an Article Activity visualization dashboard where text summarization, keyword extraction, and sentiment analysis was done on 1 million news articles. The dashboard was developed using D3 JavaScript and data mining was done using Python. Implemented a Maximum Likelihood Estimation model to predict the probability of default for a financial institution. I have done association rule mining using apriori algorithm on supermarket transaction data where I found multiple rules for items/products which are purchased together. Developed a rain prediction model using the ensemble learning model.</p>
-<p>I have worked with ExxonMobil where I was part of the Data Science team to create custom Machine Learning models. I also supported the business by providing SharePoint and Nintex based web applications using agile development practices. I also solved business problems by understanding their day to day job responsibilities and incorporating data science products.</p>
+    <h1 class="mt-5 center font-weight-bold">About Me</h1>
+    <hr style="width:20%">
+    <p>Recently graduated from the University of Regina with a Master of Science (Cooperative education) degree in Computer Science. I am a passionate software developer with experience in agile-based software development for business-oriented
+      applications. Currently working in a team for the University of Regina, developing a Full Stack Android application for digitalizing paper-based safety procedures. The application is developed using Kotlin, MySQL database is used as a backend
+      server which is connected to the application by a REST API developed using Python-based Flask to provide database connectivity. I have worked on various machine learning projects wherein data science concepts and algorithms were implemented.
+      Developed an Article Activity visualization dashboard where text summarization, keyword extraction, and sentiment analysis was done on 1 million news articles. The dashboard was developed using D3 JavaScript and data mining was done using
+      Python. Implemented a Maximum Likelihood Estimation model to predict the probability of default for a financial institution. I have done association rule mining using apriori algorithm on supermarket transaction data where I found multiple
+      rules for items/products which are purchased together. Developed a rain prediction model using the ensemble learning model.</p>
+    <p>I have worked with ExxonMobil where I was part of the Data Science team to create custom Machine Learning models. I also supported the business by providing SharePoint and Nintex based web applications using agile development practices. I also
+      solved business problems by understanding their day to day job responsibilities and incorporating data science products.</p> <br>
   </div>
-
-
 </section>
-<div class="container-fluid">
-  <h1 class="mt-5 center">Portfolio</h1>
+
+<!-- Education New -->
+<section>
+  <div class="container">
+    <h1 class="mt-5 center font-weight-bold">Education</h1>
+    <hr style="width:20%">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="education" style="background-color:#3b3b38; color:#fff;box-shadow: 10px 10px 5px grey; padding:25px;">
+          <div class="row">
+            <div class="col left font-weight-bold">
+              <h5 class="font-weight-bold couse">MS Computer Science</h5>
+            </div>
+            <div class="col right">
+              <h6 class="date">January 2018 - January 2020</h6>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col left">
+              <h6 class="course">University of Regina</h6>
+            </div>
+            <div class="col right">
+              <h6 class="date">GPA: 4.0</h6>
+            </div>
+          </div>
+          <br>
+          <p class="align">Major focus on Data Science and Artificial Intelligence along with mobile application development, IoT, Human Computer Interaction and Business Intelligence.<span id="dots"></span>
+          <div id="more">
+            <h4>Some of the Subject Studied</h4>
+            <ul>
+              <li>Artificial Intelligence</li>
+              <li>GIS and Geoprocessing</li>
+              <li>Information Visualization</li>
+              <li>Data Analysis from the Internet</li>
+              <li>Mobile Computing</li>
+              <li>Management Intelligent Information System</li>
+              <li>Information Theory</li>
+              <li>Internet of Things</li>
+            </ul>
+          </div>
+          </p>
+          <button class="btn btn-primary" onclick="myFunction()" id="myBtn">Read more</button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="education" style="background-color:#3b3b38; color:#fff;box-shadow: 10px 10px 5px grey; padding:25px;">
+          <div class="row">
+            <div class="col left font-weight-bold">
+              <h5 class="font-weight-bold course">Computer Engineering</h5>
+            </div>
+            <div class="col right">
+              <h6 class="date">August 2013 - June 2017</h6>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col left">
+              <h6 class="course">GTU</h6>
+            </div>
+            <div class="col right">
+              <h6 class="date">GPA: 3.7</h6>
+            </div>
+          </div>
+          <br>
+          <p class="align">Major focus on understanding different programming languages and analyzing algorithms and developing real world applications applying their concepts.<span id="dots2"></span>
+          <div id="more2">
+            <h4>Some of the Subject Studied</h4>
+            <ul>
+              <li>OOP with JAVA</li>
+              <li>Data Structures</li>
+              <li>Analysis and Design Algorithm</li>
+              <li>Database Management System</li>
+              <li>Compiler Desing</li>
+              <li>.Net Technology</li>
+              <li>Python Development</li>
+              <li>Theory of Computation</li>
+            </ul>
+          </div>
+          </p>
+          <button class="btn btn-primary" onclick="myFunction2()" id="myBtn2">Read more</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Technical Skills -->
+
+<!-- Portfolio -->
+
+<div class="container">
+  <h1 class="mt-5 center font-weight-bold">Portfolio</h1>
   <div class="row">
     {% for project in projects %}
     <div class="col-lg-4 col-md-6">

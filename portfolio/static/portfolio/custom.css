@@ -8,10 +8,20 @@
 
 body {
   font-family: 'Lato', sans-serif;
+  background-color:	#A9A9A9;
+
 }
 
 .center {
   text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.left{
+  text-align: left;
 }
 
 .align {
@@ -19,12 +29,35 @@ body {
  text-justify: inter-word;
 }
 
+#more {display: none;}
+#more2 {display: none;}
 hr {
   height: 3px;
-  background-color: #ccc;
-  border: none;
+  background-color: #3399CC;
+  border-radius: 20px;
 }
 
+.education {
+    padding: 50px 40px;
+    background-color: #2E3237;
+    margin: 10px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+}
+
+.course {
+    padding: 0;
+    display: inline-block;
+    color: #fff;
+    text-align: justify;
+}
+
+.date {
+    float: right;
+    display: inline-block;
+    font-size: inherit;
+    color: #fff;
+    text-align: justify;
+}
 
 .h1font {
   font-size: 3rem;
@@ -107,4 +140,24 @@ hr {
     -webkit-animation-name: fadeInUp;
 }
 
-/* Carousel CSS */
+@media (max-width: 500px) {
+  .education {
+        padding: 30px 15px;
+        background-color: #2E3237;
+        margin: 0;
+        margin-bottom: 25px;
+        box-shadow: 0 1px 4px rgba(121, 121, 121, 1);
+    }
+    .course {
+        padding: 0;
+        display: inline-block;
+        color: #fff;
+        text-align: justify;
+        font-size: 15px;
+    }
+    .date {
+        float: right;
+        display: inline-block;
+        font-size: 10px;
+    }
+}
