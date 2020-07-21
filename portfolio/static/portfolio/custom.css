@@ -1,24 +1,110 @@
 .navbar-nav .nav-link {
-    color: rgba(0,0,0,1) !important;
+  color: rgba(0, 0, 0, 1) !important;
 }
 
 .navbar-nav .nav-link:hover {
-    color: rgba(0,0,0,.5) !important;
+  color: rgba(0, 0, 0, .5) !important;
 }
 
 body {
-    font-family: 'Lato', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
-#blogtitle {
-    font-size: 6rem;
+.center {
+  text-align: center;
 }
 
-@media (min-width: 992px) {
-    #hometext {
-        font-size: 4rem;
+.align {
+  text-align: justify;
+ text-justify: inter-word;
+}
+
+hr {
+  height: 3px;
+  background-color: #ccc;
+  border: none;
+}
+
+
+.h1font {
+  font-size: 3rem;
+}
+
+.carousel-caption {
+    top: 60%;
+    bottom: auto;
+}
+
+.carousel-inner {
+  opacity: 70%;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Fade in down */
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+/* Fade In Up */
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
     }
-    #blogdetailtitle {
-        font-size: 5rem;
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
     }
 }
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
+
+/* Carousel CSS */
