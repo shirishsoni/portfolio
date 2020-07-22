@@ -91,7 +91,7 @@
               <h6 class="date">January 2018 - January 2020</h6>
             </div>
           </div>
-          <hr>
+          <hr class="hr1">
           <div class="row">
             <div class="col left">
               <h6 class="course">University of Regina</h6>
@@ -129,7 +129,7 @@
               <h6 class="date">August 2013 - June 2017</h6>
             </div>
           </div>
-          <hr>
+          <hr class="hr1">
           <div class="row">
             <div class="col left">
               <h6 class="course">GTU</h6>
@@ -170,7 +170,7 @@
       <div class="col-md-6 center">
 
         <h3 class="font-weight-bold">Programming</h3>
-        <hr>
+        <hr class="hr1">
         {% for item in prog %}
         <div class="row">
           <div class="col-md-2 font-weight-bold">
@@ -187,7 +187,7 @@
       </div>
       <div class="col-md-6 center">
         <h3 class="font-weight-bold">Web Technologies</h3>
-        <hr>
+        <hr class="hr1">
         {% for item in web %}
         <div class="row">
           <div class="col-md-2 font-weight-bold">
@@ -234,27 +234,77 @@
   </div>
 
 </section>
-<!-- Portfolio -->
 
-<div class="container">
-  <h1 class="mt-5 center font-weight-bold">Portfolio</h1>
-  <div class="row">
-    {% for project in projects %}
-    <div class="col-lg-4 col-md-6">
-      <hr>
-      {% if project.url %}
-      <a href="{{ project.url }}">
-        <img src="{{ project.image.url }}" class="img-fluid mb-2">
-      </a>
-      {% else %}
+<!-- Exoerience -->
+<section id="experience">
+  <div class="container">
+    <h1 class="mt-5 center font-weight-bold">Work Experience</h1>
+    <hr style="width:20%">
+    <div class="row">
+      <div class="col-md-6">
+        <h3 class="font-weight-bold center">Mobile Application Developer</h3>
+        <div class="row">
+          <div class="col left">
+            <p>University of Regina</p>
+          </div>
+          <div class="col right">
+            <p>Since January 2020</p>
+          </div>
+        </div>
+        <hr class="hr1">
+        <ul>
+          <li>Digitalized paper-based safety forms on Android Platform.</li>
+          <li>Created an application using KOTLIN as a programming language.</li>
+          <li>Created REST API using Python Flask to communicate with MySQL Database.</li>
+          <li>Implemented Material Design concepts for UI/UX development.</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <h3 class="font-weight-bold center">End User System Analyst</h3>
+        <div class="row">
+          <div class="col left">
+            <p>ExxonMobil</p>
+          </div>
+          <div class="col right">
+            <p>September 2018 - April 2019</p>
+          </div>
+        </div>
+        <hr class="hr1">
+        <ul>
+          <li>Developed SharePoint based AppStore using Nintex form and workflow, JavaScript, and SharePoint Web Services to replicate already created custom solutions.</li>
+          <li>Created sites, built custom Nintex forms and workflows, and managed permissions as requested by the customers.</li>
+          <li>Worked in Agile Kanban software development environment.</li>
+          <li>Created a Google’s BERT algorithm-based ML model using Python to summarize large legal documents for the legal team.</li>
+          <li>Handled client communication for project critical development.</li>
+        </ul>
+      </div>
 
-      <img src="{{ project.image.url }}" class="img-fluid mb-2">
-      {% endif %}
-      <h3>{{ project.title }}</h3>
-      <p>{{ project.description }}</p>
     </div>
-    {% endfor %}
-  </div>
-</div>
 
+  </div>
+</section>
+<!-- Portfolio -->
+<section id="Portfolio" style="background-color:#DCDCDC;">
+
+  <div class="container">
+    <h1 class="mt-5 center font-weight-bold">Portfolio</h1>
+    <div class="row">
+      {% for project in projects %}
+      <div class="col-lg-4 col-md-6">
+        <hr>
+        {% if project.url %}
+        <a href="{{ project.url }}">
+          <img src="{{ project.image.url }}" class="img-fluid mb-2">
+        </a>
+        {% else %}
+
+        <img src="{{ project.image.url }}" class="img-fluid mb-2">
+        {% endif %}
+        <h3>{{ project.title }}</h3>
+        <p>{{ project.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
 {% endblock %}

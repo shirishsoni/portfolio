@@ -39,6 +39,11 @@ hr {
   border-radius: 20px;
 }
 
+.hr1{
+  height: 2px;
+  background-color: #3399CC;
+  border-radius: 20px;
+}
 .education {
     padding: 50px 40px;
     background-color: #2E3237;
