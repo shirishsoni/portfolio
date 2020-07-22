@@ -162,7 +162,78 @@
 </section>
 
 <!-- Technical Skills -->
+<section id="technical_skills" style="background-color:#DCDCDC;">
+  <div class="container">
+    <h1 class="mt-5 center font-weight-bold">Technical Skills</h1>
+    <hr style="width:20%">
+    <div class="row">
+      <div class="col-md-6 center">
 
+        <h3 class="font-weight-bold">Programming</h3>
+        <hr>
+        {% for item in prog %}
+        <div class="row">
+          <div class="col-md-2 font-weight-bold">
+            {{ item.name }}
+          </div>
+          <div class="col-md-8">
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="{{item.value}}" aria-valuemin="0" aria-valuemax="100" style="width: {{item.value}}%"></div>
+            </div>
+          </div>
+
+        </div>
+        {% endfor %}
+      </div>
+      <div class="col-md-6 center">
+        <h3 class="font-weight-bold">Web Technologies</h3>
+        <hr>
+        {% for item in web %}
+        <div class="row">
+          <div class="col-md-2 font-weight-bold">
+            {{ item.name }}
+          </div>
+          <div class="col-md-8">
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="{{item.value}}" aria-valuemin="0" aria-valuemax="100" style="width: {{item.value}}%"></div>
+            </div>
+          </div>
+
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-2">
+        <h5 class="font-weight-bold">Analytics/Cloud:</h5>
+      </div>
+      <div class="col-md-8 font-weight-bold">
+        {% for item in cloudAnalytics%}{{item.name}}&nbsp;&nbsp;&nbsp;&nbsp;{% endfor %}
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-2">
+        <h5 class="font-weight-bold">Database:</h5>
+      </div>
+      <div class="col-md-8 font-weight-bold">
+        {% for item in db %}{{item.name}}&nbsp;&nbsp;&nbsp;&nbsp;{% endfor %}
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-2">
+        <h5 class="font-weight-bold">Tools and Technologies:</h5>
+      </div>
+      <br>
+      <div class="col-md-8 font-weight-bold">
+        {% for item in other %}{{item.name}}&nbsp;&nbsp;&nbsp;&nbsp;{% endfor %}
+      </div>
+    </div>
+  </div>
+
+</section>
 <!-- Portfolio -->
 
 <div class="container">

@@ -8,3 +8,11 @@ class Project(models.Model):
 
     def __str__(self):
         return self.title
+
+class Languages(models.Model):
+    name = models.CharField(max_length=50)
+    value = models.CharField(max_length=3, blank=True)
+    type = models.CharField(max_length=25)
+
+    def __str__(self):
+        return self.name
