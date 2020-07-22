@@ -1,5 +1,5 @@
 {% load static %}
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -8,11 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
   <link rel="stylesheet" href="{% static "portfolio/custom.css" %}" media="all">
-
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-
   <link rel="icon" type="image/png" href="{% static "portfolio/Logo.png" %}">
 
   <title>Shirish Soni</title>
@@ -20,7 +17,7 @@
 
 <body>
 
-  <nav id="topNav" class="navbar navbar-expand-md navbar-light" style="background-color: #495c6f ;">
+  <nav id="topNav" class="navbar fixed-top navbar-expand-md navbar-light" style="background-color: #495c6f ;">
     <div class="container-fluid">
       <a class="navbar-brand" href="{% url 'home' %}">
         <img src="{% static "portfolio/Logo.png" %}" width="40" height="40" class="d-inline-block align-top" alt="Shirish's Logo">
