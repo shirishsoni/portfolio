@@ -172,11 +172,12 @@
         <h3 class="font-weight-bold">Programming</h3>
         <hr class="hr1">
         {% for item in prog %}
+        <br>
         <div class="row">
-          <div class="col-md-2 font-weight-bold">
+          <div class="col-md-2 font-weight-bold left">
             {{ item.name }}
           </div>
-          <div class="col-md-8">
+          <div class="col-md-10 right">
             <div class="progress">
               <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="{{item.value}}" aria-valuemin="0" aria-valuemax="100" style="width: {{item.value}}%"></div>
             </div>
@@ -189,11 +190,12 @@
         <h3 class="font-weight-bold">Web Technologies</h3>
         <hr class="hr1">
         {% for item in web %}
+        <br>
         <div class="row">
-          <div class="col-md-2 font-weight-bold">
+          <div class="col-md-2 font-weight-bold left">
             {{ item.name }}
           </div>
-          <div class="col-md-8">
+          <div class="col-md-10 right">
             <div class="progress">
               <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="{{item.value}}" aria-valuemin="0" aria-valuemax="100" style="width: {{item.value}}%"></div>
             </div>
