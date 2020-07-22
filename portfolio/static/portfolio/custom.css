@@ -44,6 +44,12 @@ hr {
   background-color: #3399CC;
   border-radius: 20px;
 }
+
+.vl {
+  border-left: 6px solid blue;
+  height: 500px;
+  display: inline-block;
+}
 .education {
     padding: 50px 40px;
     background-color: #2E3237;
@@ -64,6 +70,33 @@ hr {
     font-size: inherit;
     color: #fff;
     text-align: justify;
+}
+
+.social {
+    border-bottom: 2px solid #5e5e5e52;
+    max-width: 20%;
+    margin: auto;
+    padding-bottom: 5px;
+}
+
+.social .fab {
+    font-size: 34px;
+    color: #5E5E5E;
+}
+
+.social .fab:hover {
+    font-size: 34px;
+    color: #b60400;
+}
+
+.social a:hover {
+    color: #c0392b;
+}
+
+.social a {
+    font-size: 32px;
+    margin: 0 10px;
+    color: #c7c7c7;
 }
 
 .h1font {
@@ -147,6 +180,26 @@ hr {
     -webkit-animation-name: fadeInUp;
 }
 
+@media (max-width: 1200px) {
+
+  .social {
+        border-bottom: 2px solid #5e5e5e52;
+        max-width: 50%;
+        margin: auto;
+        padding-bottom: 5px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+  .social {
+      border-bottom: 2px solid #5e5e5e52;
+      max-width: 65%;
+      margin: auto;
+      padding-bottom: 5px;
+  }
+}
 @media (max-width: 500px) {
   .education {
         padding: 30px 15px;
