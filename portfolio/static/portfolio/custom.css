@@ -98,7 +98,7 @@ hr {
 }
 
 .h1font {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .carousel-caption {
@@ -108,7 +108,7 @@ hr {
 
 .carousel-inner {
   opacity: 70%;
-  width: 80%;
+  width: 50%;
   margin: 0 auto;
 }
 
