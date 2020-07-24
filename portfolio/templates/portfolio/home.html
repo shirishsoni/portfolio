@@ -60,9 +60,10 @@
 </section>
 <!-- About Me -->
 <section style="background-color:#DCDCDC;">
+  <br>
   <div class="container align" id="aboutme">
 
-    <h1 class="mt-5 center font-weight-bold">About Me</h1>
+    <h1 class="center font-weight-bold">About Me</h1>
     <hr style="width:20%">
     <p>Recently graduated from the University of Regina with a Master of Science (Cooperative education) degree in Computer Science. I am a passionate software developer with experience in agile-based software development for business-oriented
       applications. Currently working in a team for the University of Regina, developing a Full Stack Android application for digitalizing paper-based safety procedures. The application is developed using Kotlin, MySQL database is used as a backend
@@ -71,14 +72,15 @@
       Python. Implemented a Maximum Likelihood Estimation model to predict the probability of default for a financial institution. I have done association rule mining using apriori algorithm on supermarket transaction data where I found multiple
       rules for items/products which are purchased together. Developed a rain prediction model using the ensemble learning model.</p>
     <p>I have worked with ExxonMobil where I was part of the Data Science team to create custom Machine Learning models. I also supported the business by providing SharePoint and Nintex based web applications using agile development practices. I also
-      solved business problems by understanding their day to day job responsibilities and incorporating data science products.</p> <br>
+      solved business problems by understanding their day to day job responsibilities and incorporating data science products.</p>
   </div>
+  <br>
 </section>
-
 <!-- Education New -->
 <section id="education">
+  <br>
   <div class="container">
-    <h1 class="mt-5 center font-weight-bold">Education</h1>
+    <h1 class="center font-weight-bold">Education</h1>
     <hr style="width:20%">
     <div class="row">
       <div class="col-md-6">
@@ -159,50 +161,62 @@
       </div>
     </div>
   </div>
+  <br>
 </section>
-
 <!-- Technical Skills -->
 <section id="technical_skills" style="background-color:#DCDCDC;">
+  <br>
   <div class="container">
-    <h1 class="mt-5 center font-weight-bold">Technical Skills</h1>
+    <h1 class="center font-weight-bold">Technical Skills</h1>
     <hr style="width:20%">
     <div class="row">
       <div class="col-md-6 center">
-
-        <h3 class="font-weight-bold">Programming</h3>
-        <hr class="hr1">
-        {% for item in prog %}
-        <br>
-        <div class="row">
-          <div class="col-md-2 font-weight-bold left">
-            {{ item.name }}
-          </div>
-          <div class="col-md-10 right">
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="{{item.value}}" aria-valuemin="0" aria-valuemax="100" style="width: {{item.value}}%"></div>
+        <div class="mr-3">
+          <h3 class="font-weight-bold">Programming</h3>
+          <hr class="hr1">
+          {% for item in prog %}
+          <br>
+          <div class="row">
+            <div class="col-md-2 font-weight-bold left">
+              <div class="mr-3">
+                {{ item.name }}
+              </div>
+            </div>
+            <div class="col-md-10 right">
+              <div class="ml-3">
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="{{item.value}}" aria-valuemin="0" aria-valuemax="100" style="width: {{item.value}}%"></div>
+                </div>
+              </div>
             </div>
           </div>
-
+          {% endfor %}
         </div>
-        {% endfor %}
       </div>
       <div class="col-md-6 center">
-        <h3 class="font-weight-bold">Web Technologies</h3>
-        <hr class="hr1">
-        {% for item in web %}
-        <br>
-        <div class="row">
-          <div class="col-md-2 font-weight-bold left">
-            {{ item.name }}
-          </div>
-          <div class="col-md-10 right">
-            <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="{{item.value}}" aria-valuemin="0" aria-valuemax="100" style="width: {{item.value}}%"></div>
+        <div class="ml-3">
+          <h3 class="font-weight-bold">Web Technologies</h3>
+          <hr class="hr1">
+          {% for item in web %}
+          <br>
+          <div class="row">
+            <div class="col-md-2 font-weight-bold left">
+              <div class="mr-3">
+                {{ item.name }}
+              </div>
+            </div>
+            <div class="col-md-10 right">
+              <div class="ml-3">
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="{{item.value}}" aria-valuemin="0" aria-valuemax="100" style="width: {{item.value}}%"></div>
+                </div>
+              </div>
+
             </div>
           </div>
-
+          {% endfor %}
         </div>
-        {% endfor %}
+
       </div>
     </div>
     <br>
@@ -234,62 +248,65 @@
       </div>
     </div>
   </div>
-
+  <br>
 </section>
-
 <!-- Exoerience -->
 <section id="experience">
+  <br>
   <div class="container">
-    <h1 class="mt-5 center font-weight-bold">Work Experience</h1>
+    <h1 class="center font-weight-bold">Work Experience</h1>
     <hr style="width:20%">
     <div class="row">
       <div class="col-md-6">
-        <h3 class="font-weight-bold center">Mobile Application Developer</h3>
-        <div class="row">
-          <div class="col left">
-            <p class="font-weight-bold">University of Regina</p>
+        <div class="mr-3">
+          <h3 class="font-weight-bold center">Mobile Application Developer</h3>
+          <div class="row">
+            <div class="col left">
+              <p class="font-weight-bold">University of Regina</p>
+            </div>
+            <div class="col right">
+              <p>Since January 2020</p>
+            </div>
           </div>
-          <div class="col right">
-            <p>Since January 2020</p>
-          </div>
+          <hr class="hr1">
+          <ul>
+            <li>Digitalized paper-based safety forms on Android Platform.</li>
+            <li>Created an application using KOTLIN as a programming language.</li>
+            <li>Created REST API using Python Flask to communicate with MySQL Database.</li>
+            <li>Implemented Material Design concepts for UI/UX development.</li>
+          </ul>
         </div>
-        <hr class="hr1">
-        <ul>
-          <li>Digitalized paper-based safety forms on Android Platform.</li>
-          <li>Created an application using KOTLIN as a programming language.</li>
-          <li>Created REST API using Python Flask to communicate with MySQL Database.</li>
-          <li>Implemented Material Design concepts for UI/UX development.</li>
-        </ul>
       </div>
       <div class="col-md-6">
-        <h3 class="font-weight-bold center">End User System Analyst</h3>
-        <div class="row">
-          <div class="col left">
-            <p class="font-weight-bold">ExxonMobil</p>
+        <div class="ml-3">
+          <h3 class="font-weight-bold center">End User System Analyst</h3>
+          <div class="row">
+            <div class="col left">
+              <p class="font-weight-bold">ExxonMobil</p>
+            </div>
+            <div class="col right">
+              <p>September 2018 - April 2019</p>
+            </div>
           </div>
-          <div class="col right">
-            <p>September 2018 - April 2019</p>
-          </div>
+          <hr class="hr1">
+          <ul>
+            <li>Developed SharePoint based AppStore using Nintex form and workflow, JavaScript, and SharePoint Web Services to replicate already created custom solutions.</li>
+            <li>Created sites, built custom Nintex forms and workflows, and managed permissions as requested by the customers.</li>
+            <li>Worked in Agile Kanban software development environment.</li>
+            <li>Created a Google’s BERT algorithm-based ML model using Python to summarize large legal documents for the legal team.</li>
+            <li>Handled client communication for project critical development.</li>
+          </ul>
         </div>
-        <hr class="hr1">
-        <ul>
-          <li>Developed SharePoint based AppStore using Nintex form and workflow, JavaScript, and SharePoint Web Services to replicate already created custom solutions.</li>
-          <li>Created sites, built custom Nintex forms and workflows, and managed permissions as requested by the customers.</li>
-          <li>Worked in Agile Kanban software development environment.</li>
-          <li>Created a Google’s BERT algorithm-based ML model using Python to summarize large legal documents for the legal team.</li>
-          <li>Handled client communication for project critical development.</li>
-        </ul>
       </div>
-
     </div>
-
   </div>
+  <br>
 </section>
 <!-- Portfolio -->
 <section id="Portfolio" style="background-color:#DCDCDC;">
-
+  <br>
   <div class="container">
-    <h1 class="mt-5 center font-weight-bold">Portfolio</h1>
+    <h1 class="center font-weight-bold">Portfolio</h1>
     <div class="row">
       {% for project in projects %}
       <div class="col-lg-4 col-md-6">
@@ -308,6 +325,7 @@
       {% endfor %}
     </div>
   </div>
+  <br>
 </section>
 
 {% endblock %}
