@@ -240,6 +240,7 @@ hr {
     }
 
     .technology {
+      margin-left: 0px !important;
       margin-bottom: 25px;
     }
 }
