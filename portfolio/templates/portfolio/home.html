@@ -41,25 +41,6 @@
       moreText.style.display = "inline";
     }
   }
-
-  function myFunction3() {
-    var dots = document.getElementById("dots3");
-    var moreText = document.getElementById("more3");
-    var moreText2 = document.getElementById("more4");
-    var btnText = document.getElementById("myBtn3");
-
-    if (dots.style.display === "none") {
-      dots.style.display = "inline";
-      btnText.innerHTML = "Read more";
-      moreText.style.display = "none";
-      moreText2.style.display = "none";
-    } else {
-      dots.style.display = "none";
-      btnText.innerHTML = "Read less";
-      moreText.style.display = "inline";
-      moreText2.style.display = "inline";
-    }
-  }
 </script>
 <!-- Carousal content -->
 <section id='carousel'>
@@ -70,7 +51,7 @@
         <div class="carousel-caption d-none d-md-block">
           <h1 class="animated fadeInDown h1font">Full Stack Developer | Data Analyst</h1>
           <hr style="background-color:white;">
-          <p class="animated fadeInUp" style="color:white;font-weight:bold;">Passionate Full Stack Developer with Masters Degree</p>
+          <p class="animated fadeInUp carouselsubcaption" >Passionate Full Stack Developer with Masters Degree</p>
         </div>
       </div>
     </div>
@@ -84,13 +65,13 @@
     <h1 class="center font-weight-bold">About Me</h1>
     <hr class="hrwidth">
     <p>Recently graduated from the University of Regina with a Master of Science (Cooperative education) degree in Computer Science. I am a passionate software developer with experience in agile-based software development for business-oriented
-      applications.<span id="dots3"></span><span id="more3"> Currently working in a team for the University of Regina, developing a Full Stack Android application for digitalizing paper-based safety procedures. The application is developed using Kotlin, MySQL database is used as a backend
+      applications.Currently working in a team for the University of Regina, developing a Full Stack Android application for digitalizing paper-based safety procedures. The application is developed using Kotlin, MySQL database is used as a backend
       server which is connected to the application by a REST API developed using Python-based Flask to provide database connectivity. I have worked on various machine learning projects wherein data science concepts and algorithms were implemented.
       Developed an Article Activity visualization dashboard where text summarization, keyword extraction, and sentiment analysis was done on 1 million news articles. The dashboard was developed using D3 JavaScript and data mining was done using
       Python. Implemented a Maximum Likelihood Estimation model to predict the probability of default for a financial institution. I have done association rule mining using apriori algorithm on supermarket transaction data where I found multiple
-      rules for items/products which are purchased together. Developed a rain prediction model using the ensemble learning model.</p></span>
-      <span id="more4"><p>I have worked with ExxonMobil where I was part of the Data Science team to create custom Machine Learning models. I also supported the business by providing SharePoint and Nintex based web applications using agile development practices. I also
-      solved business problems by understanding their day to day job responsibilities and incorporating data science products.</p></span><button class="btn btn-primary" onclick="myFunction3()" id="myBtn3">Read more</button>
+      rules for items/products which are purchased together. Developed a rain prediction model using the ensemble learning model.</p>
+      <p>I have worked with ExxonMobil where I was part of the Data Science team to create custom Machine Learning models. I also supported the business by providing SharePoint and Nintex based web applications using agile development practices. I also
+      solved business problems by understanding their day to day job responsibilities and incorporating data science products.</p>
   </div>
   <br>
 </section>
@@ -188,7 +169,7 @@
     <h1 class="center font-weight-bold">Technical Skills</h1>
     <hr class="hrwidth">
     <div class="row">
-      <div class="col-md-6 center">
+      <div class="col-md-6 center technology">
         <div class="mr-3">
           <h3 class="font-weight-bold">Programming</h3>
           <hr class="hr1">
@@ -211,7 +192,7 @@
           {% endfor %}
         </div>
       </div>
-      <div class="col-md-6 center">
+      <div class="col-md-6 center technology">
         <div class="ml-3">
           <h3 class="font-weight-bold">Web Technologies</h3>
           <hr class="hr1">
@@ -243,7 +224,15 @@
         <h5 class="font-weight-bold">Analytics/Cloud:</h5>
       </div>
       <div class="col-md-8 col-lg-10 col-xs-8 col-sm-8 font-weight-bold">
-        {% for item in cloudAnalytics%}<span>{{item.name}}, </span>{% endfor %}
+        {% for item in cloudAnalytics %}
+        <span>
+          {% if forloop.counter != lenCloud %}
+            {{item.name}},
+          {% else %}
+            {{item.name}}
+          {% endif %}
+        </span>
+        {% endfor %}
       </div>
     </div>
     <br>
@@ -252,7 +241,15 @@
         <h5 class="font-weight-bold">Database:</h5>
       </div>
       <div class="col-md-8 col-lg-10 col-xs-8 col-sm-8 font-weight-bold">
-        {% for item in db %}<span>{{item.name}}, </span>{% endfor %}
+        {% for item in db %}
+        <span>
+          {% if forloop.counter != lendb %}
+            {{item.name}},
+          {% else %}
+            {{item.name}}
+          {% endif %}
+        </span>
+        {% endfor %}
       </div>
     </div>
     <br>
@@ -262,7 +259,15 @@
       </div>
       <br>
       <div class="col-md-8 col-lg-10 col-xs-8 col-sm-8 font-weight-bold">
-        {% for item in other %}<span>{{item.name}}, </span>{% endfor %}
+        {% for item in other %}
+        <span>
+          {% if forloop.counter != lenother %}
+            {{item.name}},
+          {% else %}
+            {{item.name}}
+          {% endif %}
+        </span>
+        {% endfor %}
       </div>
     </div>
   </div>

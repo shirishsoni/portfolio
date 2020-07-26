@@ -9,5 +9,9 @@ def home(request):
     db = Languages.objects.filter(type = "db")
     cloud_analytics = Languages.objects.filter(type="CloudAnalytics")
     other = Languages.objects.filter(type="other")
+    lenCloud = len(cloud_analytics)
+    lendb = len(db)
+    lenother = len(other)
+    print(lenCloud, lendb, lenother)
 
-    return render(request, 'portfolio/home.html', {'projects':projects,'prog':programming,'web':web,'db':db,'cloudAnalytics':cloud_analytics,'other':other,'lang':languages})
+    return render(request, 'portfolio/home.html', {'projects':projects,'prog':programming,'web':web,'db':db,'cloudAnalytics':cloud_analytics,'other':other,'lang':languages,"lenCloud":lenCloud,"lendb":lendb, "lenother":lenother})

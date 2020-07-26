@@ -111,14 +111,19 @@ hr {
   font-size: 45px;
 }
 
+.carouselsubcaption{
+  color:white;
+  font-weight:bold;
+}
+
 .logotitle{
   font-size: 25px;
   color: white;
 }
 
 .carousel-caption {
-    top: 60%;
-    bottom: auto;
+    top: auto;
+    bottom: 5%;
 }
 
 .carousel-inner {
@@ -233,15 +238,27 @@ hr {
         display: inline-block;
         font-size: 10px;
     }
+
+    .technology {
+      margin-bottom: 25px;
+    }
 }
 
 @media (max-width: 1024px) {
 
   .h1font {
-
     color: white;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 15px;
+  }
+  .carouselsubcaption{
+    color:white;
+    font-weight:bold;
+    font-size: 10px;
+  }
+  .carousel-caption {
+      top: auto;
+      bottom: 5%;
   }
 
 }
