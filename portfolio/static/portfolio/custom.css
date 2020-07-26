@@ -1,5 +1,5 @@
 .navbar-nav .nav-link {
-  color: rgba(0, 0, 0, 1) !important;
+  color: white !important;
 }
 
 .navbar-nav .nav-link:hover {
@@ -32,6 +32,8 @@ body {
 
 #more {display: none;}
 #more2 {display: none;}
+#more3 {display: none;}
+#more4 {display: none;}
 hr {
   height: 3px;
   background-color: #3399CC;
@@ -42,6 +44,10 @@ hr {
   height: 2px;
   background-color: #3399CC;
   border-radius: 20px;
+}
+
+.hrwidth{
+  width:50%
 }
 
 .vl {
@@ -99,7 +105,15 @@ hr {
 }
 
 .h1font {
-  font-size: 2rem;
+
+  color: white;
+  font-weight: bold;
+  font-size: 45px;
+}
+
+.logotitle{
+  font-size: 25px;
+  color: white;
 }
 
 .carousel-caption {
@@ -108,8 +122,8 @@ hr {
 }
 
 .carousel-inner {
-  opacity: 70%;
-  width: 50%;
+  opacity: 60%;
+  width: 65%;
   margin: 0 auto;
 }
 
@@ -219,4 +233,15 @@ hr {
         display: inline-block;
         font-size: 10px;
     }
+}
+
+@media (max-width: 1024px) {
+
+  .h1font {
+
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
 }

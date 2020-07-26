@@ -26,8 +26,6 @@
       moreText.style.display = "inline";
     }
   }
-</script>
-<script>
   function myFunction2() {
     var dots = document.getElementById("dots2");
     var moreText = document.getElementById("more2");
@@ -43,6 +41,25 @@
       moreText.style.display = "inline";
     }
   }
+
+  function myFunction3() {
+    var dots = document.getElementById("dots3");
+    var moreText = document.getElementById("more3");
+    var moreText2 = document.getElementById("more4");
+    var btnText = document.getElementById("myBtn3");
+
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "Read more";
+      moreText.style.display = "none";
+      moreText2.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "Read less";
+      moreText.style.display = "inline";
+      moreText2.style.display = "inline";
+    }
+  }
 </script>
 <!-- Carousal content -->
 <section id='carousel'>
@@ -51,8 +68,9 @@
       <div class="carousel-item active center">
         <img src="{% static 'portfolio/Profile.jpg' %}" class="d-block w-100" alt="...">
         <div class="carousel-caption d-none d-md-block">
-          <h1 class="animated fadeInDown h1font" style="color:blue; font-weight:bold;">Full Stack Developer | Data Analyst</h1>
-          <p class="animated fadeInUp" style="color:blue;font-weight:bold;">Passionate Full Stack Developer with Masters Degree</p>
+          <h1 class="animated fadeInDown h1font">Full Stack Developer | Data Analyst</h1>
+          <hr style="background-color:white;">
+          <p class="animated fadeInUp" style="color:white;font-weight:bold;">Passionate Full Stack Developer with Masters Degree</p>
         </div>
       </div>
     </div>
@@ -64,15 +82,15 @@
   <div class="container align" id="aboutme">
 
     <h1 class="center font-weight-bold">About Me</h1>
-    <hr style="width:20%">
+    <hr class="hrwidth">
     <p>Recently graduated from the University of Regina with a Master of Science (Cooperative education) degree in Computer Science. I am a passionate software developer with experience in agile-based software development for business-oriented
-      applications. Currently working in a team for the University of Regina, developing a Full Stack Android application for digitalizing paper-based safety procedures. The application is developed using Kotlin, MySQL database is used as a backend
+      applications.<span id="dots3"></span><span id="more3"> Currently working in a team for the University of Regina, developing a Full Stack Android application for digitalizing paper-based safety procedures. The application is developed using Kotlin, MySQL database is used as a backend
       server which is connected to the application by a REST API developed using Python-based Flask to provide database connectivity. I have worked on various machine learning projects wherein data science concepts and algorithms were implemented.
       Developed an Article Activity visualization dashboard where text summarization, keyword extraction, and sentiment analysis was done on 1 million news articles. The dashboard was developed using D3 JavaScript and data mining was done using
       Python. Implemented a Maximum Likelihood Estimation model to predict the probability of default for a financial institution. I have done association rule mining using apriori algorithm on supermarket transaction data where I found multiple
-      rules for items/products which are purchased together. Developed a rain prediction model using the ensemble learning model.</p>
-    <p>I have worked with ExxonMobil where I was part of the Data Science team to create custom Machine Learning models. I also supported the business by providing SharePoint and Nintex based web applications using agile development practices. I also
-      solved business problems by understanding their day to day job responsibilities and incorporating data science products.</p>
+      rules for items/products which are purchased together. Developed a rain prediction model using the ensemble learning model.</p></span>
+      <span id="more4"><p>I have worked with ExxonMobil where I was part of the Data Science team to create custom Machine Learning models. I also supported the business by providing SharePoint and Nintex based web applications using agile development practices. I also
+      solved business problems by understanding their day to day job responsibilities and incorporating data science products.</p></span><button class="btn btn-primary" onclick="myFunction3()" id="myBtn3">Read more</button>
   </div>
   <br>
 </section>
@@ -81,7 +99,7 @@
   <br>
   <div class="container">
     <h1 class="center font-weight-bold">Education</h1>
-    <hr style="width:20%">
+    <hr class="hrwidth">
     <div class="row">
       <div class="col-md-6">
         <div class="education" style="background-color:#3b3b38; color:#fff;box-shadow: 10px 10px 5px grey; padding:25px;">
@@ -168,7 +186,7 @@
   <br>
   <div class="container">
     <h1 class="center font-weight-bold">Technical Skills</h1>
-    <hr style="width:20%">
+    <hr class="hrwidth">
     <div class="row">
       <div class="col-md-6 center">
         <div class="mr-3">
@@ -177,12 +195,12 @@
           {% for item in prog %}
           <br>
           <div class="row">
-            <div class="col-md-2 font-weight-bold left">
+            <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4 col-xl-4 font-weight-bold left">
               <div class="mr-3">
                 {{ item.name }}
               </div>
             </div>
-            <div class="col-md-10 right">
+            <div class="col-md-8 col-lg-8 col-xs-8 col-sm-8 col-xl-8 right">
               <div class="ml-3">
                 <div class="progress">
                   <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="{{item.value}}" aria-valuemin="0" aria-valuemax="100" style="width: {{item.value}}%"></div>
@@ -200,12 +218,12 @@
           {% for item in web %}
           <br>
           <div class="row">
-            <div class="col-md-2 font-weight-bold left">
+            <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4 col-xl-4 font-weight-bold left">
               <div class="mr-3">
                 {{ item.name }}
               </div>
             </div>
-            <div class="col-md-10 right">
+            <div class="col-md-8 col-lg-8 col-xs-8 col-sm-8 col-xl-8 right">
               <div class="ml-3">
                 <div class="progress">
                   <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="{{item.value}}" aria-valuemin="0" aria-valuemax="100" style="width: {{item.value}}%"></div>
@@ -221,30 +239,30 @@
     </div>
     <br>
     <div class="row">
-      <div class="col-md-2">
+      <div class="col-md-4 col-lg-2 col-xs-4 col-sm-4">
         <h5 class="font-weight-bold">Analytics/Cloud:</h5>
       </div>
-      <div class="col-md-8 font-weight-bold">
-        {% for item in cloudAnalytics%}{{item.name}}&nbsp;&nbsp;&nbsp;&nbsp;{% endfor %}
+      <div class="col-md-8 col-lg-10 col-xs-8 col-sm-8 font-weight-bold">
+        {% for item in cloudAnalytics%}<span>{{item.name}}, </span>{% endfor %}
       </div>
     </div>
     <br>
     <div class="row">
-      <div class="col-md-2">
+      <div class="col-md-4 col-lg-2 col-xs-4 col-sm-4">
         <h5 class="font-weight-bold">Database:</h5>
       </div>
-      <div class="col-md-8 font-weight-bold">
-        {% for item in db %}{{item.name}}&nbsp;&nbsp;&nbsp;&nbsp;{% endfor %}
+      <div class="col-md-8 col-lg-10 col-xs-8 col-sm-8 font-weight-bold">
+        {% for item in db %}<span>{{item.name}}, </span>{% endfor %}
       </div>
     </div>
     <br>
     <div class="row">
-      <div class="col-md-2">
+      <div class="col-md-4 col-lg-2 col-xs-4 col-sm-4">
         <h5 class="font-weight-bold">Tools and Technologies:</h5>
       </div>
       <br>
-      <div class="col-md-8 font-weight-bold">
-        {% for item in other %}{{item.name}}&nbsp;&nbsp;&nbsp;&nbsp;{% endfor %}
+      <div class="col-md-8 col-lg-10 col-xs-8 col-sm-8 font-weight-bold">
+        {% for item in other %}<span>{{item.name}}, </span>{% endfor %}
       </div>
     </div>
   </div>
@@ -255,7 +273,7 @@
   <br>
   <div class="container">
     <h1 class="center font-weight-bold">Work Experience</h1>
-    <hr style="width:20%">
+    <hr class="hrwidth">
     <div class="row">
       <div class="col-md-6">
         <div class="mr-3">
@@ -269,7 +287,7 @@
             </div>
           </div>
           <hr class="hr1">
-          <ul>
+          <ul class="align">
             <li>Digitalized paper-based safety forms on Android Platform.</li>
             <li>Created an application using KOTLIN as a programming language.</li>
             <li>Created REST API using Python Flask to communicate with MySQL Database.</li>
@@ -289,7 +307,7 @@
             </div>
           </div>
           <hr class="hr1">
-          <ul>
+          <ul class="align">
             <li>Developed SharePoint based AppStore using Nintex form and workflow, JavaScript, and SharePoint Web Services to replicate already created custom solutions.</li>
             <li>Created sites, built custom Nintex forms and workflows, and managed permissions as requested by the customers.</li>
             <li>Worked in Agile Kanban software development environment.</li>
@@ -320,7 +338,7 @@
         <img src="{{ project.image.url }}" class="img-fluid mb-2">
         {% endif %}
         <h3>{{ project.title }}</h3>
-        <p>{{ project.description }}</p>
+        <p class="align">{{ project.description }}</p>
       </div>
       {% endfor %}
     </div>
